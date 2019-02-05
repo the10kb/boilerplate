@@ -18,3 +18,4 @@ Process
 1. Create github repo with initial commit
 2. Create the appveyor project
 3. Update build status icon link(project's settings/badge tab)
+4. Update npm api key

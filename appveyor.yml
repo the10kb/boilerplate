@@ -21,4 +21,5 @@ for:
         - /release\/.*/
     after_deploy:
       - npm version %APPVEYOR_BUILD_VERSION%
+      - "//registry.npmjs.org/:_authToken=$env:npm_auth_token`n" | out-file "$env:userprofile\.npmrc" -Encoding ASCII
       - npm publish
