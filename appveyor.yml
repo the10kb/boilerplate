@@ -6,13 +6,12 @@ cache:
   - node_modules -> package.json
 
 install:
-  - npm install
   - npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
+  - npm install
 
 build_script:
   - npm test
   - npm run build
-
 
 for:
   -
