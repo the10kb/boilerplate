@@ -7,18 +7,22 @@ cache:
 
 install:
   - npm install
+  # skipping package.json
+  #- git add .
+  - npm version %APPVEYOR_BUILD_VERSION% --no-git-tag-version
 
 build_script:
-  - npm run build
-
-test_script:
   - npm test
+  - npm run build
 
 for:
   -
     branches:
       only:
         - /release\/.*/
-    after_deploy:
-      - npm version %APPVEYOR_BUILD_VERSION%
-      - npm publish
+    after_build:
+
+      - ps: >-
+          "//registry.npmjs.org/:_authToken=$env:npm_auth_token`n" | out-file "$env:userprofile\.npmrc" -Encoding ASCII
+
+      - npm publish --access public

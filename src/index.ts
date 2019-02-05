@@ -1,2 +1,2 @@
 //exports...
-export const NAME = "%NAME%";
+export const NAME = "boilerplate";
