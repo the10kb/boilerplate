@@ -1,4 +1,4 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/cji3y4d03a92bk2e?svg=true)](https://ci.appveyor.com/project/the10kb/boilerplate)
+[![Build status](https://ci.appveyor.com/api/projects/status/l42wyn1660xrfjin?svg=true)](https://ci.appveyor.com/project/pavel_shirobok/boilerplate)
 
 Install
 -------
@@ -17,4 +17,4 @@ Process
 -------
 1. Create github repo with initial commit
 2. Create the appveyor project
-3. Update build status icon link
+3. Update build status icon link(project's settings/badge tab)
