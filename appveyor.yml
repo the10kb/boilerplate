@@ -6,8 +6,10 @@ cache:
   - node_modules -> package.json
 
 install:
-  - npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
   - npm install
+  # skipping package.json
+  - git add . && git commit
+  - npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
 
 build_script:
   - npm test
