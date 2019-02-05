@@ -2,6 +2,9 @@
 environment:
   version: 0.0.{build}
 
+cache:
+  - node_modules -> package.json
+
 install:
   - npm install
   - npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
@@ -13,13 +16,9 @@ test_script:
   - npm test
 
 for:
-  # override settings for `master` branch
   -
     branches:
       only:
-        - master
-
-    configuration: Release
-
+        - /release\/.*/
     after_deploy:
       - npm publish
