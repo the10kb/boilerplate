@@ -8,7 +8,7 @@ cache:
 install:
   - npm install
 
-test_script:
+build_script:
   - npm test
   - npm run build
 
@@ -18,7 +18,7 @@ for:
     branches:
       only:
         - /release\/.*/
-    after_test:
+    after_build:
       - npm version %APPVEYOR_BUILD_VERSION%
       - ps: >-
           "//registry.npmjs.org/:_authToken=$env:npm_auth_token`n" | out-file "$env:userprofile\.npmrc" -Encoding ASCII
