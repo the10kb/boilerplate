@@ -7,6 +7,7 @@ cache:
 
 install:
   - npm install
+  - npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
 
 build_script:
   - npm test
@@ -19,7 +20,7 @@ for:
       only:
         - /release\/.*/
     after_build:
-      - npm version %APPVEYOR_BUILD_VERSION%
+
       - ps: >-
           "//registry.npmjs.org/:_authToken=$env:npm_auth_token`n" | out-file "$env:userprofile\.npmrc" -Encoding ASCII
       - npm publish
