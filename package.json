@@ -1,5 +1,5 @@
 {
-  "name": "%NAME%",
+  "name": "10kb/%NAME%",
   "version": "0.0.1",
   "description": "%NAME%",
   "main": "./dist/index.js",
