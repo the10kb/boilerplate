@@ -7,7 +7,6 @@ cache:
 
 install:
   - npm install
-  #- npm version %APPVEYOR_BUILD_VERSION% -m 'v%APPVEYOR_BUILD_VERSION%'
 
 build_script:
   - npm run build
@@ -21,4 +20,5 @@ for:
       only:
         - /release\/.*/
     after_deploy:
+      - npm version %APPVEYOR_BUILD_VERSION%
       - npm publish
