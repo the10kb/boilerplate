@@ -1,7 +1,7 @@
 {
   "name": "@10kb/boilerplate",
   "version": "0.0.1",
-  "description": "%NAME%",
+  "description": "boilerplate project description",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
