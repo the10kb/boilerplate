@@ -9,7 +9,7 @@ install:
   - npm install
   # skipping package.json
   #- git add .
-  - npm version %APPVEYOR_BUILD_VERSION%
+  - npm version %APPVEYOR_BUILD_VERSION% --no-git-tag-version
 
 build_script:
   - npm test
