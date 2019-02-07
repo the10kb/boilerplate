@@ -15,7 +15,9 @@
             false,
             "allow-null-check",
             "allow-undefined-check"
-        ]
+        ],
+
+        "no-shadowed-variable": false
     },
     "rulesDirectory": []
 }
